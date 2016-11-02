@@ -19,6 +19,6 @@ class solution(object):
   def swapPairs2(self,head):
     if head!=None and head.next!=None:
       next=head.next
-      head,next=self.swapPairs2(next.next)
+      head.next=self.swapPairs2(next.next)
       next.next=head
       return next
